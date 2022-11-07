@@ -1,4 +1,4 @@
-# my-go-docker-preset
+# go-docker-actions-template
 
 
 ## setup workflows permission 
