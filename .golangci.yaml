@@ -1,3 +1,6 @@
+run:
+  tests: false
+
 linters:
   enable:
     - cyclop
@@ -5,16 +8,14 @@ linters:
     - durationcheck
     - errorlint
     - exhaustive
-    - exportloopref
+    - copyloopvar
     - forcetypeassert
     - gocognit
     - goconst
     - gocritic
     - gocyclo
     - gofmt
-    - gomnd
     - gosec
-    - lll
     - makezero
     - nakedret
     - nestif
