@@ -1,20 +1,19 @@
+version: "2"
 run:
   tests: false
-
 linters:
   enable:
+    - copyloopvar
     - cyclop
     - dupl
     - durationcheck
     - errorlint
     - exhaustive
-    - copyloopvar
     - forcetypeassert
     - gocognit
     - goconst
     - gocritic
     - gocyclo
-    - gofmt
     - gosec
     - makezero
     - nakedret
@@ -26,3 +25,23 @@ linters:
     - unparam
     - wastedassign
     - wrapcheck
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
